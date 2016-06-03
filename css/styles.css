@@ -1,4 +1,29 @@
+body {
+  background-color: #dddddd;
+}
+
+.container {
+  background-color: #285fbd;
+  margin-top: 30px;
+}
+
+.jumbotron {
+  background-color: #fffdd3;
+}
+
+h1 {
+  color: white;
+}
+
 .question {
+  display: none;
+}
+
+#finished-button {
+  display: none;
+}
+
+#result {
   display: none;
 }
 
@@ -20,19 +45,34 @@ img {
   padding: 20px;
 }
 
+.btns {
+  max-width: 800px;
+  margin-top: 30px;
+  background-color: #bab9a0;
+  padding: 30px;
+  box-shadow: 8px 8px 5px #888888;
+}
+
+.btns hr {
+  margin-bottom: 0px;
+}
+
 button {
   margin-top: 30px;
 }
 
 label {
-  margin: 10px;
-  margin-left: 20px;
+  width: 180px;
+  font-size: 16px;
 }
 
 .pic {
   max-width: 800px;
   height: 500px;
-  background-color: white;
+  background-color: #bab9a0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 8px 8px 5px #888888;
 }
 
 @media (max-width: 767px) {

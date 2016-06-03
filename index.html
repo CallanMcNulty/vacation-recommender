@@ -14,7 +14,7 @@
       </header>
 
       <form class="jumbotron">
-        <h3>How important is to you that your state have</h3>
+        <h3>How important is it that your state have</h3>
         <hr>
         <div class="question" id="1">
           <h2>A Coastline</h2>
@@ -77,14 +77,23 @@
           </div>
         </div>
 
-        <div class="btns">
-          <label><input type="radio" name="options" value="-1">&nbsp;It should not have that</label>
-          <label><input type="radio" name="options" value="0" checked>&nbsp;Not Important</label>
-          <label><input type="radio" name="options" value="1">&nbsp;Important</label>
-          <label><input type="radio" name="options" value="2">&nbsp;Very Important</label>
+        <div id="result">
+          <h2></h2>
+          <div class="pic center-block">
+            <img src="" alt="flag of your chosen state">
+          </div>
+        </div>
+
+        <div class="btns center-block">
+          <label><input class="radio-inline-inline" type="radio" name="options" value="-1"><br>It should not have that</label>
+          <label><input class="radio-inline" type="radio" name="options" value="0" checked><br>Not Important</label>
+          <label><input class="radio-inline" type="radio" name="options" value="1"><br>Important</label>
+          <label><input class="radio-inline" type="radio" name="options" value="2"><br>Very Important</label>
           <br>
+          <hr>
           <button class="btn btn-lg btn-primary" type="submit">Next</button>
         </div>
+        <button id="finished-button" class="btn btn-lg btn-success" type="submit">Submit Test</button>
       </form>
 
     </div>
