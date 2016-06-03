@@ -61,28 +61,34 @@ $(document).ready(function() {
       WA+=answer; OR+=answer; CA+=answer; AK+=answer; HI+=answer; ME+=answer; NH+=answer; MA+=answer; RI+=answer; CT+=answer; NY+=answer; NJ+=answer;
       DE+=answer; MD+=answer; VA+=answer; NC+=answer; SC+=answer; GA+=answer; FL+=answer; AL+=answer; MS+=answer; LA+=answer; TX+=answer;
     } else if (question_number === 2) {
-      CA+=answer; NV+=answer; AZ+=answer; NM+=answer; TX+=answer; LA+=answer; MS+=answer; AL+=answer; GA+=answer; SC+=answer; NC+=answer; FL+=answer+1; HI+=answer+1;
+      CA+=answer; NV+=answer; AZ+=answer; NM+=answer; TX+=answer; LA+=answer; MS+=answer; AL+=answer; GA+=answer; SC+=answer; NC+=answer; FL+=answer+1*answer; HI+=answer+1*answer;
     } else if (question_number === 3) {
-      AK+=answer; WA+=answer; OR+=answer; CA+=answer; NV+=answer; ID+=answer; MT+=answer; WY+=answer+1; UT+=answer+1; CO+=answer+1; NM+=answer; NC+=answer;
+      AK+=answer; WA+=answer; OR+=answer; CA+=answer; NV+=answer; ID+=answer; MT+=answer; WY+=answer+1*answer; UT+=answer+1*answer; CO+=answer+1*answer; NM+=answer; NC+=answer;
       VA+=answer; WV+=answer; PA+=answer;
     } else if (question_number === 4) {
-      CA+=answer+1; FL+=answer+1; HI+=answer+1; TX+=answer; NY+=answer; NJ+=answer; SC+=answer; VA+=answer; MD+=answer; NC+=answer; GA+=answer;
+      CA+=answer+1*answer; FL+=answer+1*answer; HI+=answer+1*answer; TX+=answer; NY+=answer; NJ+=answer; SC+=answer; VA+=answer; MD+=answer; NC+=answer; GA+=answer;
     } else if (question_number === 5) {
-      WA+=answer+1; OR+=answer+1; CA+=answer+1; ID+=answer+1; MT+=answer; WY+=answer; UT+=answer; CO+=answer+1; AZ+=answer; NM+=answer; MN+=answer; WI+=answer+1;
-      MI+=answer+1; LA+=answer; MS+=answer; AL+=answer; GA+=answer; FL+=answer; SC+=answer; NC+=answer, MO+=answer; AR+=answer; KY+=answer; WV+=answer; NH+=answer;
+      WA+=answer+1*answer; OR+=answer+1*answer; CA+=answer+1*answer; ID+=answer+1*answer; MT+=answer; WY+=answer; UT+=answer; CO+=answer+1*answer; AZ+=answer; NM+=answer; MN+=answer; WI+=answer+1*answer;
+      MI+=answer+1*answer; LA+=answer; MS+=answer; AL+=answer; GA+=answer; FL+=answer; SC+=answer; NC+=answer, MO+=answer; AR+=answer; KY+=answer; WV+=answer; NH+=answer;
       VT+=answer;
     } else if (question_number === 6) {
-      CA+=answer+1; AZ+=answer+1; TX+=answer; IL+=answer; PA+=answer; NY+=answer+1; FL+=answer; IN+=answer; OH+=answer; NC+=answer; WA+=answer;
+      CA+=answer+1*answer; AZ+=answer+1*answer; TX+=answer; IL+=answer; PA+=answer; NY+=answer+1*answer; FL+=answer; IN+=answer; OH+=answer; NC+=answer; WA+=answer;
       CO+=answer; MI+=answer; MA+=answer; //Boston and bigger
     } else if (question_number === 7) {
-      MT+=answer; WY+=answer+1; ND+=answer; SD+=answer; IA+=answer+1; OK+=answer; AR+=answer; MS+=answer; AL+=answer; KY+=answer; WV+=answer;
+      MT+=answer; WY+=answer+1*answer; ND+=answer; SD+=answer; IA+=answer+1*answer; OK+=answer; AR+=answer; MS+=answer; AL+=answer; KY+=answer; WV+=answer;
       VT+=answer; NH+=answer; ME+=answer; NE+=answer; KS+=answer; MO+=answer
     } else if (question_number === 8) {
-      NC+=answer; TN+=answer; AZ+=answer; CO+=answer; CA+=answer; WY+=answer+1; MT+=answer; UT+=answer; WA+=answer; ME+=answer;
+      NC+=answer; TN+=answer; AZ+=answer; CO+=answer; CA+=answer; WY+=answer+1*answer; MT+=answer; UT+=answer; WA+=answer; ME+=answer;
     } else if (question_number === 9) {
-      NY+=answer+1; SD+=answer; MO+=answer; CA+=answer; AZ+=answer; PA+=answer; NV+=answer; WA+=answer;
+      NY+=answer+1*answer; SD+=answer; MO+=answer; CA+=answer; AZ+=answer; PA+=answer; NV+=answer; WA+=answer;
     } else if (question_number === 10){
-      VA+=answer+1; NY+=answer; MA+=answer+1; PA+=answer; IL+=answer; LA+=answer; SC+=answer; TX+=answer;
+      VA+=answer+1*answer; NY+=answer; MA+=answer+1*answer; PA+=answer; IL+=answer; LA+=answer; SC+=answer; TX+=answer;
+
+      $("button").text('Submit Test');
+      $("button").removeClass('btn-primary');
+      $("button").addClass('btn-success');
+      $("label").hide();
+      $("h3").text("You have finished the test");
     } else {
 
       var max_value = Math.max(AL,AK,AZ,AR,CA,CO,CT,DE,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MN,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY);

@@ -1,3 +1,47 @@
 .question {
   display: none;
 }
+
+.container {
+  text-align: center;
+}
+
+h3 {
+  margin-top: -25px;
+}
+
+hr {
+  margin-bottom: 50px;
+}
+
+img {
+  height: 100%;
+  max-width: 100%;
+  padding: 20px;
+}
+
+button {
+  margin-top: 30px;
+}
+
+label {
+  margin: 10px;
+  margin-left: 20px;
+}
+
+.pic {
+  max-width: 800px;
+  height: 500px;
+  background-color: white;
+}
+
+@media (max-width: 767px) {
+  .pic {
+    width: auto;
+    height: auto;
+  }
+  img {
+    height: auto;
+    max-height: 100%;
+  }
+}
