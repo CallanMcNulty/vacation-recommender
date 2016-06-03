@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
     <title>Vacation Suggester</title>
   </head>
@@ -90,11 +91,28 @@
           <label><input class="radio-inline" type="radio" name="options" value="1"><br>Important</label>
           <label><input class="radio-inline" type="radio" name="options" value="2"><br>Very Important</label>
           <br>
-          <hr>
           <button class="btn btn-lg btn-primary" type="submit">Next</button>
         </div>
         <button id="finished-button" class="btn btn-lg btn-success" type="submit">Submit Test</button>
+        <button id="more-button" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#other-states">More</button>
       </form>
+
+      <div class="modal" id="other-states" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Other States You Might Like:</h4>
+            </div>
+            <div class="modal-body">
+              <ol id="other" class="text-center">
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </body>

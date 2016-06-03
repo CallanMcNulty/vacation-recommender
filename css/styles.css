@@ -19,11 +19,7 @@ h1 {
   display: none;
 }
 
-#finished-button {
-  display: none;
-}
-
-#result {
+#finished-button, #more-button, #result {
   display: none;
 }
 
@@ -53,17 +49,16 @@ img {
   box-shadow: 8px 8px 5px #888888;
 }
 
-.btns hr {
-  margin-bottom: 0px;
-}
-
 button {
   margin-top: 30px;
+  width: 200px;
 }
 
 label {
   width: 180px;
-  font-size: 16px;
+  font-size: 14px;
+  background-color: white;
+  padding: 10px;
 }
 
 .pic {
@@ -73,6 +68,18 @@ label {
   margin-top: 30px;
   margin-bottom: 30px;
   box-shadow: 8px 8px 5px #888888;
+}
+
+li img {
+  max-width: 300px;
+  max-height: 237px;
+  margin-bottom: 30px;
+  margin-top: -10px;
+}
+
+ol {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 @media (max-width: 767px) {

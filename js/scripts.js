@@ -49,6 +49,26 @@ var	WV = 0;
 var	WI = 0;
 var	WY = 0;
 
+var sortStates = function(states, values) {
+  var sortedStates = [];
+  while(sortedStates.length < 50) {
+    var max = -20;
+    var max_index = 0;
+    for(var i=0; i<states.length; i++) {
+      if(values[i]>max) {
+        max = values[i];
+        max_index = i;
+      }
+    }
+    sortedStates.push(states[max_index]);
+    states.splice(max_index, 1);
+    values.splice(max_index, 1);
+  }
+  return sortedStates;
+}
+
+
+
 $(document).ready(function() {
   var question_number = 1;
   $("#1").show();
@@ -63,6 +83,8 @@ $(document).ready(function() {
       $(".btns").show();
       $("#finished-button").hide();
       $("h3").text("How important is it that your state have");
+      $("#more-button").hide();
+      $("ul").empty();
       return;
     }
 
@@ -100,20 +122,26 @@ $(document).ready(function() {
       $("#result").children(".pic").hide();
     } else {
 
-      var max_value = Math.max(AL,AK,AZ,AR,CA,CO,CT,DE,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MN,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY);
+      var states = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa', 'Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts' ,'Michigan','Minnesota','Mississippi' ,'Missouri','Montana','Nebraska' ,'Nevada','New Hampshire','New Jersey','New Mexico','New York' ,'North Carolina','North Dakota','Ohio','Oklahoma','Oregon' ,'Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee' ,'Texas','Utah','Vermont','Virginia','Washington','West Virginia' ,'Wisconsin','Wyoming'];
 
-      var state_values = [AL,AK,AZ,AR,CA,CO,CT,DE,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MN,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]
+      var state_values = [AL,AK,AZ,AR,CA,CO,CT,DE,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MN,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY];
 
-      var state_index = state_values.indexOf(max_value);
+      var sorted = sortStates(states, state_values);
 
-      var states = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa', 'Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts' ,'Michigan','Minnesota','Mississippi' ,'Missouri','Montana','Nebraska' ,'Nevada','New Hampshire','New Jersey','New Mexico','New York' ,'North','Carolina','North Dakota','Ohio','Oklahoma','Oregon' ,'Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee' ,'Texas','Utah','Vermont','Virginia','Washington','West Virginia' ,'Wisconsin','Wyoming'];
+      for (var i=0; i<50; i++) {
+        var flag = "http://www.homemade-preschool.com/images/"+sorted[i].replace(" ","-")+"-State-Flag.png"
+        $("ol").append("<li><p>"+sorted[i]+"</p><img src='"+flag+"' alt='flag'</li>");
+      }
 
-      var recommended_state = states[state_index];
+      var recommended_state = sorted[0];
 
       $("#result").children("h2").text(recommended_state);
       $("#result").children(".pic").children("img").attr("src", "http://www.homemade-preschool.com/images/"+recommended_state.replace(" ","-")+"-State-Flag.png");
       $("#result").children(".pic").show();
       $("#finished-button").text('Take the test again');
+      $("#more-button").show();
+
+      delete sorted;
     }
 
     question_number ++;
