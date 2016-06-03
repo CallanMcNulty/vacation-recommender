@@ -11,6 +11,7 @@ This is a webpage that will present a series of questions to the user about thei
 ## Setup/Installation Requirements
 
 * Open in a Bootstrap and jQuery supported browser
+* OR view with GitHub Pages here: http://callanmcnulty.github.io/vacation-recommender/
 
 ## Support and contact details
 
