@@ -84,7 +84,7 @@ $(document).ready(function() {
       $("#finished-button").hide();
       $("h3").text("How important is it that your state have");
       $("#more-button").hide();
-      $("ul").empty();
+      $("ol").empty();
       return;
     }
 
